@@ -26,7 +26,7 @@ export default class GoodsPropertiesEntity{
     type: "integer",
     nullable: false
   })
-  @OneToOne(() => PropertiesEntity)
+  @ManyToOne(() => PropertiesEntity, (property) => property.goodsProperties)
   @JoinColumn()
   property: PropertiesEntity
 
