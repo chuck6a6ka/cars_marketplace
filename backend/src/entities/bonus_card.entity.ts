@@ -28,7 +28,7 @@ export default class BonusCardEntity{
     nullable: false,
     unique: true
   })
-  @OneToOne(user => BonusLevelEntity)
+  @OneToOne(level => BonusLevelEntity)
   @JoinColumn()
   level: BonusLevelEntity
 
