@@ -1,4 +1,6 @@
-import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import ShopsEntity from "./shops.entity";
+import FilesEntity from "./files.entity";
 
 @Entity('avatar_shop')
 export default class AvatarShopEntity{
@@ -14,7 +16,9 @@ export default class AvatarShopEntity{
     nullable: false,
     unique: true
   })
-  shopId: number
+  @OneToOne(() => ShopsEntity)
+  @JoinColumn()
+  shop: ShopsEntity
 
   @Column({
     name: 'fileId',
@@ -23,5 +27,6 @@ export default class AvatarShopEntity{
     nullable: false,
     unique: true
   })
-  fileId: string
+  @OneToOne(() => FilesEntity)
+  file: FilesEntity
 }
