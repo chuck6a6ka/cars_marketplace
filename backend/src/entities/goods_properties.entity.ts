@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn } from "typeorm";
 import GoodsEntity from "./goods.entity";
 import PropertiesEntity from "./properties.entity";
 
@@ -17,7 +17,7 @@ export default class GoodsPropertiesEntity{
     type: "integer",
     nullable: false
   })
-  @OneToOne(() => GoodsEntity)
+  @ManyToOne(() => GoodsEntity, (goods) => goods.properties)
   @JoinColumn()
   goods: GoodsEntity
 
