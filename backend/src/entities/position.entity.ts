@@ -2,11 +2,8 @@ import {
   Column,
   Entity,
   JoinColumn,
-  ManyToOne,
-  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
-  Repository
 } from "typeorm";
 import DepartmentEntity from "./department.entity";
 @Entity({
