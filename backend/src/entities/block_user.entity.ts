@@ -18,7 +18,7 @@ export default class BlockUserEntity{
     length: 256,
     nullable: false
   })
-  @OneToOne(user => UserEntity)
+  @OneToOne(() => UserEntity)
   @JoinColumn()
   user: UserEntity
 
@@ -27,7 +27,7 @@ export default class BlockUserEntity{
     type: "integer",
     nullable: false,
   })
-  @OneToOne(reason => ReasonEntity)
+  @OneToOne(() => ReasonEntity)
   @JoinColumn()
   reason: ReasonEntity
 

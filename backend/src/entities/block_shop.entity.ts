@@ -15,7 +15,7 @@ export default class BlockShopEntity{
     type: "integer",
     nullable: false,
   })
-  @OneToOne(shop => ShopsEntity)
+  @OneToOne( () => ShopsEntity)
   @JoinColumn()
   shop: ShopsEntity
 
@@ -24,7 +24,7 @@ export default class BlockShopEntity{
     type: "integer",
     nullable: false,
   })
-  @OneToOne(reason => ReasonEntity)
+  @OneToOne( () => ReasonEntity)
   @JoinColumn()
   reason: ReasonEntity
 

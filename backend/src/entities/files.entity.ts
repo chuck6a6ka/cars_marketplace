@@ -17,7 +17,7 @@ export default class FilesEntity{
     type: "integer",
     nullable: false
   })
-  @OneToOne(category => FileCategoriesEntity)
+  @OneToOne(() => FileCategoriesEntity)
   @JoinColumn()
   category: FileCategoriesEntity
 
@@ -27,7 +27,7 @@ export default class FilesEntity{
     length: 256,
     nullable: false
   })
-  @OneToOne(user => UserEntity)
+  @OneToOne(() => UserEntity)
   @JoinColumn()
   user: UserEntity
 
