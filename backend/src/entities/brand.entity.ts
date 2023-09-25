@@ -11,7 +11,7 @@ export default class BrandEntity{
   @Column({
     name: 'title',
     type: "char",
-    length: 256,
+    length: 128,
     nullable: false
   })
   title: string
@@ -19,7 +19,7 @@ export default class BrandEntity{
   @Column({
     name: 'code',
     type: "char",
-    length: 256,
+    length: 128,
     nullable: false
   })
   code: string
