@@ -14,7 +14,8 @@ export default class BonusCardEntity{
 
   @Column({
     name: 'userId',
-    type: "integer",
+    type: "char",
+    length: 256,
     nullable: false,
     unique: true
   })
