@@ -24,6 +24,7 @@ export default class ShopGoodsEntity {
     type: 'char',
     length: 256,
     nullable: false,
+    unique: true
   })
   @OneToOne(() => GoodsEntity)
   @JoinColumn()

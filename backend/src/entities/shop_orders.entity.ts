@@ -17,6 +17,7 @@ export default class ShopOrdersEntity{
     type: 'char',
     length: 256,
     nullable: false,
+    unique: true
   })
   @OneToOne(() => OrdersEntity)
   @JoinColumn()
