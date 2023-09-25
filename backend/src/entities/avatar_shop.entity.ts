@@ -11,7 +11,8 @@ export default class AvatarShopEntity{
   @Column({
     name: 'shopId',
     type: "integer",
-    nullable: false
+    nullable: false,
+    unique: true
   })
   shopId: number
 
@@ -20,6 +21,7 @@ export default class AvatarShopEntity{
     type: "char",
     length: 256,
     nullable: false,
+    unique: true
   })
   fileId: string
 }
