@@ -82,7 +82,8 @@ export default class FilesEntity{
     name: 'timestamp',
     type: 'char',
     length: 64,
-    nullable: false
+    nullable: false,
+    default: new Date().getTime()
   })
   timestamp: string
 

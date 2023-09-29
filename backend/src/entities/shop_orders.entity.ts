@@ -28,6 +28,6 @@ export default class ShopOrdersEntity{
     type: 'integer',
     nullable: false,
   })
-  @ManyToOne(() => ShopsEntity, (shop) => shop)
+  @ManyToOne(() => ShopsEntity, (shop) => shop.orders)
   shop: ShopsEntity;
 }

@@ -24,7 +24,8 @@ export default class PhotosGoodsEntity{
   @Column({
     name: 'fileId',
     type: "integer",
-    nullable: false
+    nullable: false,
+    unique: true
   })
   @OneToOne(() => FilesEntity)
   @JoinColumn()

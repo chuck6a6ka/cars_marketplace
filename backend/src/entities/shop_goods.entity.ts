@@ -35,7 +35,7 @@ export default class ShopGoodsEntity {
     type: 'integer',
     nullable: false,
   })
-  @ManyToOne(() => ShopsEntity, (shop) => shop)
+  @ManyToOne(() => ShopsEntity, (shop) => shop.goods)
   shop: ShopsEntity;
 
   @Column({

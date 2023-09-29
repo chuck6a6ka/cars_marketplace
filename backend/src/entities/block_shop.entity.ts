@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import ReasonEntity from "./reason.entity";
 import ShopsEntity from "./shops.entity";
 
@@ -15,8 +15,7 @@ export default class BlockShopEntity{
     type: "integer",
     nullable: false,
   })
-  @OneToOne( () => ShopsEntity)
-  @JoinColumn()
+  @ManyToOne( () => ShopsEntity, (shop) => shop.blocking)
   shop: ShopsEntity
 
   @Column({
